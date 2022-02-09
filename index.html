@@ -17,18 +17,21 @@
     <script>
         var badRequest = false;
         if (!window.location.search) { badRequest = true }
+        
         var q = document.location.search.split('?')[1].split('.');
         var base = "https://ncert.nic.in/textbook/pdf/";
         var subCode; var end = q[1]; var sub = q[0]; var oneZero = "10";
-        var bharaj_Ki_Khoj_Code = "h2"; var bharaj_Ki_Khoj = "hhbk";
-        var vasant_3_Code = "h1"; var vasant_3 = "hhvs";
-        var honeydew_Code = "e1"; var honeydew = "hehd";
-        var it_So_Happened_Code = "e2"; var it_So_Happened = "heih";
-        var mahts_Code = "m"; var maths = "hemh";
-        var science_Code = "s"; var science = "hesc";
-        var his_Code = "h";
+        
+        var bharaj_Ki_Khoj_Code = "h2";     var bharaj_Ki_Khoj = "hhbk";
+        var vasant_3_Code = "h1";           var vasant_3 = "hhvs";
+        var honeydew_Code = "e1";           var honeydew = "hehd";
+        var it_So_Happened_Code = "e2";     var it_So_Happened = "heih";
+        var mahts_Code = "m";               var maths = "hemh";
+        var science_Code = "s";             var science = "hesc";
+        var his_Code = "h";                 var sst = "hess";
         var civics_Code = "c";
-        var geo_Code = "g"; var sst = "hess";
+        var geo_Code = "g"; 
+       
         if (sub == bharaj_Ki_Khoj_Code) { var subCode = bharaj_Ki_Khoj; }
         else if (sub == vasant_3_Code) { var subCode = vasant_3; }
         else if (sub == honeydew_Code) { var subCode = honeydew; }
@@ -39,8 +42,11 @@
         else if (sub == civics_Code) { var subCode = sst; oneZero = "30" }
         else if (sub == geo_Code) { var subCode = sst; oneZero = "40" }
         else { var badRequest = true; }
-        var full = base + subCode + oneZero + end + ".pdf";
-        if (end == "0") { var end = "1ps"; var full = base + subCode + end + ".pdf"; }
+        
+        if (end.length==2){var oneZero="1"; var full = base + subCode + oneZero + end + ".pdf";}
+        else if (end == "0") { var end = "1ps"; var full = base + subCode + end + ".pdf"; }
+		else {var full = base + subCode + oneZero + end + ".pdf";}
+        
         if (!badRequest) { window.location.replace(full); }
     </script>
 </body>
