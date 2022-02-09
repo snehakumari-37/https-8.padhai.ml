@@ -32,15 +32,15 @@
         var civics_Code = "c";
         var geo_Code = "g"; 
        
-        if (sub == bharaj_Ki_Khoj_Code) { var subCode = bharaj_Ki_Khoj; }
-        else if (sub == vasant_3_Code) { var subCode = vasant_3; }
-        else if (sub == honeydew_Code) { var subCode = honeydew; }
-        else if (sub == it_So_Happened_Code) { var subCode = it_So_Happened; }
-        else if (sub == mahts_Code) { var subCode = maths; }
-        else if (sub == science_Code) { var subCode = science; }
-        else if (sub == his_Code) { var subCode = sst; oneZero = "20" }
-        else if (sub == civics_Code) { var subCode = sst; oneZero = "30" }
-        else if (sub == geo_Code) { var subCode = sst; oneZero = "40" }
+        if (sub == bharaj_Ki_Khoj_Code)         { var subCode = bharaj_Ki_Khoj; }
+        else if (sub == vasant_3_Code)          { var subCode = vasant_3; }
+        else if (sub == honeydew_Code)          { var subCode = honeydew; }
+        else if (sub == it_So_Happened_Code)    { var subCode = it_So_Happened; }
+        else if (sub == mahts_Code)             { var subCode = maths; }
+        else if (sub == science_Code)           { var subCode = science; }
+        else if (sub == his_Code)               { var subCode = sst; oneZero = "20" }
+        else if (sub == civics_Code)            { var subCode = sst; oneZero = "30" }
+        else if (sub == geo_Code)               { var subCode = sst; oneZero = "40" }
         else { var badRequest = true; }
         
         if (end.length==2){var oneZero=oneZero.split("0")[0]; var full = base + subCode + oneZero + end + ".pdf";}
