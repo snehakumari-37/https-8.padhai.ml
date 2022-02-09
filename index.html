@@ -43,7 +43,7 @@
         else if (sub == geo_Code) { var subCode = sst; oneZero = "40" }
         else { var badRequest = true; }
         
-        if (end.length==2){var oneZero="1"; var full = base + subCode + oneZero + end + ".pdf";}
+        if (end.length==2){var oneZero=oneZero.split("0")[0]; var full = base + subCode + oneZero + end + ".pdf";}
         else if (end == "0") { var end = "1ps"; var full = base + subCode + end + ".pdf"; }
 		else {var full = base + subCode + oneZero + end + ".pdf";}
         
