@@ -1,7 +1,8 @@
-console.log("https://www.youtube.com/channel/UCeYbR_IwQJpEx-0d-ZB54Ng/search?query=comics");
+console.log("https://www.youtube.com/channel/UCeYbR_IwQJpEx-0d-ZB54Ng/search?query=comics"); // Comics
+console.log("https://www.youtube.com/channel/UCb0yQ6RJCoy8_W9hLrRebYg/videos"); // Greninja AMV
 var badRequest = false;
 if (!window.location.search) { badRequest = true }
-
+if(!badRequest){
 var q = document.location.search.split('?')[1].split('.');
 var base = "https://ncert.nic.in/textbook/pdf/";
 var subCode; var end = q[1]; var sub = q[0]; var oneZero = "10";
@@ -32,4 +33,5 @@ else if (end == "0") { var end = "1ps"; var full = base + subCode + end + ".pdf"
 else {var full = base + subCode + oneZero + end + ".pdf";}
 
 if (!badRequest) { window.location.replace(full); }
+}
 
