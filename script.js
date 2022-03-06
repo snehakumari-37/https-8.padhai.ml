@@ -31,3 +31,4 @@ else if (end == "0") { var end = "1ps"; var full = base + subCode + end + ".pdf"
 else {var full = base + subCode + oneZero + end + ".pdf";}
 
 if (!badRequest) { window.location.replace(full); }
+console.log("https://www.youtube.com/channel/UCeYbR_IwQJpEx-0d-ZB54Ng/search?query=comics");
